@@ -12,9 +12,14 @@
         android:theme="@style/Theme.Xidach"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.Xidach" />
+        <activity
+            android:name=".MenuActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_menu"
             android:theme="@style/Theme.Xidach">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +27,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".GameActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.Xidach" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.Xidach" />
     </application>
 
 </manifest>

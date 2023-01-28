@@ -5,53 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-
     <TextView
-        android:id="@+id/playerName"
+        android:id="@+id/txtPlayerName1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/toggleButton"
+        app:layout_constraintRight_toLeftOf="@id/iv1"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButtonToggleGroup
-        android:id="@+id/toggleButton"
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:theme="@style/Widget.Material3.Button.IconButton"
+        android:background="@drawable/round_keyboard_double_arrow_right_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtPlayerName1"
+        app:layout_constraintRight_toLeftOf="@id/txtPlayerName2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPlayerName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:saveEnabled="true"
+        android:text="Name2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/playerName"
+        app:layout_constraintLeft_toRightOf="@id/iv1"
         app:layout_constraintRight_toLeftOf="@id/txtScore"
-        app:layout_constraintTop_toTopOf="parent"
-        app:singleSelection="true">
-
-        <Button
-            android:id="@+id/btnUp"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_20sdp"
-            app:icon="@drawable/round_thumb_up_24" />
-
-        <Button
-            android:id="@+id/btnDown"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:icon="@drawable/round_thumb_down_24" />
-    </com.google.android.material.button.MaterialButtonToggleGroup>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="@dimen/_14ssp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/toggleButton"
+        app:layout_constraintLeft_toRightOf="@id/txtPlayerName2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
